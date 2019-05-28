@@ -2,9 +2,14 @@
   "name": "OceanSpray",
   "version": "0.0.1",
   "private": true,
+  
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "eslint .",
+    "android": "react-native run-android",
+    "build-android": "cd android && ./gradlew clean && ./gradlew assembleRelease",
+    "build-android-windows": "cd android && gradlew clean && gradlew assembleRelease",
+    "android-release": "react-native run-android --variant=release"
   },
   "dependencies": {
     "react": "16.8.3",

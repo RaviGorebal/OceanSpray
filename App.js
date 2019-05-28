@@ -21,24 +21,19 @@ type Props = {};
 export default class App extends Component<Props> {
 
   componentDidMount() {
-    // this.netInfo();
     setTimeout(() => {
-        /* istanbul ignore else */
         if (Platform.OS !== "ios") {
             SplashScreen.hide();
         }
     }, 2000);
-
-    // NetInfo.isConnected.addEventListener('connectionChange', this.handleFirstConnectivityChange);
 }
+
 
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.welcome}>Welcome to Ocean Spray App</Text>
       </View>
     );
   }
@@ -49,12 +44,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#ea3535',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
+    color:'white'
   },
   instructions: {
     textAlign: 'center',
