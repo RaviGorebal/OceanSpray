@@ -1,15 +1,20 @@
-import React from 'react'
-import { TouchableOpacity, Text } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import React, { Component } from 'react';
+import { View, Text, ImageBackground } from 'react-native'
+import {navigateTo} from "../../../utils/utility";
+import LanguageTemplate from '../templates';
 
-const Home = () => {
-   const goToAbout = () => {
-      Actions.about()
-   }
-   return (
-      <TouchableOpacity style = {{ margin: 128 }} onPress = {goToAbout}>
-         <Text>PRESS ME!</Text>
-      </TouchableOpacity>
-   )
+class LanguageContainer extends Component {
+
+onForgotPassword = () =>{
+    navigateTo("loginContainer")
 }
-export default Home
+
+
+    render(){
+            return(<LanguageTemplate 
+                onForgotPassword={this.onForgotPassword}/>)
+    }
+}
+
+
+export default LanguageContainer;
