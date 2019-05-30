@@ -90,6 +90,15 @@ const styles = {
         textDecorationLine:'underline',
         color:"rgb(43,43,43)",
         textAlign:"center"
+    },
+    forgotPasswordText :{
+        fontSize : 13,
+        color : "rgb(43,43,43)",
+        paddingTop : 30,
+        textAlign:'center',
+        textDecorationLine : 'underline',
+        textDecorationColor : 'rgb(43,43,43)',
+      
     }
 
 }

@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         backText:{
             color:oceanColor.white,
             fontSize:18,
-            fontFamily:"Gotham-Book",
+            // fontFamily:"Gotham-Book",
         },
         notificationContainer:{
             flex:1,

@@ -9,7 +9,7 @@ import {navigateTo,navigateBack} from "../../../utils/utility";
 export default class ForgotPasswordContainer extends Component {
 
   onPressNavigateBack = () =>{
-    navigateTo("forgotusernamecontainer")
+    navigateTo("loginContainer")
   }
   renderContent=()=>{
     return(

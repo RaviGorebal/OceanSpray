@@ -120,8 +120,12 @@ class Login extends Component {
                                 </View>
                             </TouchableOpacity>
                             <View>
-                                <Text style={[styles.forgotUsernameStyles]}>Forgot your username?</Text>
-                                <Text style={[styles.forgotPasswordStyles]}>Forgot your password?</Text>
+                                 <TouchableOpacity onPress={this.props.onForgotUserName}>
+                                    <Text style={styles.forgotPasswordText}>Forgot your username?</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={this.props.onForgotPassword}>
+                                    <Text style={styles.forgotPasswordText}>Forgot your password?</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>
