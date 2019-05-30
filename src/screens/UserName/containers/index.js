@@ -4,7 +4,7 @@ import { Actions } from 'react-native-router-flux'
 
 const About = () => {
    const goToHome = () => {
-      Actions.home()
+      Actions.forgotPassword()
    }
    return (
       <TouchableOpacity style = {{ margin: 128 }} onPress = {goToHome}>
