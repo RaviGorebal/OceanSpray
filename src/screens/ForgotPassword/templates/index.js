@@ -6,12 +6,10 @@ import Toolbar from "../../../components/Toolbar"
 
 const propTypes = {
     onbackPress: PropTypes.func,
-    toolbarTitle: PropTypes.string,
 };
 
 const defaultProps = {
     onbackPress: () => {},
-    toolbarTitle: "",
 };
 
 
