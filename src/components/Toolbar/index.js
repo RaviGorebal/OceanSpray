@@ -7,7 +7,7 @@ import OceanSprayImages from "../../constants/imageSource";
 const propTypes = {
     title: PropTypes.string,
     leftIconName: PropTypes.string,
-    onPressLeftIcon: PropTypes.func,
+    onPressNavigateBack: PropTypes.func,
     onPressNotificationIcon:PropTypes.func,
     toolbarContainer: PropTypes.object,
     oceanLogoContainer:PropTypes.object,
@@ -17,7 +17,7 @@ const propTypes = {
 
 const defaultProps = {
     title:'',
-    onPressLeftIcon: () => {},
+    onPressNavigateBack: () => {},
     onPressNotificationIcon: ()=>{},
     oceanLogoContainer:{},
     oceanLogoImage:{},
@@ -33,7 +33,7 @@ class Toolbar extends Component{
                     <View style={styles.backArrowContainer}>
                         {this.props.leftArrowIcon !== "" &&
                             <TouchableOpacity
-                            onPress={this.props.onPressLeftIcon}>
+                            onPress={this.props.onPressNavigateBack}>
                                 <View style={styles.leftIconContainer}>
                                     <Image style={styles.leftArrowImage} source={OceanSprayImages.backIconImage}/>
                                     <Text style={styles.backText}>Back</Text>

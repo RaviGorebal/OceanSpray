@@ -7,13 +7,11 @@ import Toolbar from "../../../components/Toolbar"
 const propTypes = {
     onbackPress: PropTypes.func,
     toolbarTitle: PropTypes.string,
-    renderContent: PropTypes.element
 };
 
 const defaultProps = {
     onbackPress: () => {},
     toolbarTitle: "",
-    renderContent: <Text>Content</Text>
 };
 
 
@@ -26,9 +24,7 @@ class ForgotPasswordTemplate extends Component {
                 <SafeAreaView style={styles.appContainer}>
                     <Toolbar
                         leftIconName="arrow-left"
-                        onPressLeftIcon={this.props.onbackPress}
-                        leftArrowIcon={""}
-                        notifications={12}
+                        onPressNavigateBack={this.props.onPressNavigateBack}
                         notificationIcon={""}
                         title={this.props.toolbarTitle} />
                         <View style={styles.subContainer}>

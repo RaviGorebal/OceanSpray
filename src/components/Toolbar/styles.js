@@ -15,13 +15,14 @@ const styles = StyleSheet.create({
         oceanLogoContainer:{
             flex:1.8,
             alignItems:"center",
-            paddingTop:50
+            paddingTop:50,
+            position:"relative"
         },
         oceanLogoImage: {
             paddingTop:30,
             width: 105,
             height: 60,
-            zIndex:1,
+            zIndex:999,
             position:'absolute',
         },
         leftIconContainer:{

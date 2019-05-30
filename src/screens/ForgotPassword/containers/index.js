@@ -3,10 +3,14 @@ import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
 import {Icon} from "react-native-elements";
 import styles from "./styles";
 import ForgotPasswordTemplate from "../templates";
+import {navigateTo,navigateBack} from "../../../utils/utility";
+
 
 export default class ForgotPasswordContainer extends Component {
 
-
+  onPressNavigateBack = () =>{
+    navigateTo("forgotusernamecontainer")
+  }
   renderContent=()=>{
     return(
       <View style={styles.container}>
@@ -27,7 +31,8 @@ export default class ForgotPasswordContainer extends Component {
     return (
      
     <ForgotPasswordTemplate 
-      renderContent={this.renderContent()}
+      renderContent={this.renderContent}
+      onPressNavigateBack={this.onPressNavigateBack}
       />
     );
   }
