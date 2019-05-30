@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native'
+import { View, Text, ImageBackground, SafeAreaView } from 'react-native'
 import Button from './../../../components/Button'
 import styles from './style';
 import Logo from '../../../assets/bitmap.png';
+import Toolbar from '../../../components/Toolbar';
 
 class UserNameRecovery extends Component {
     render() {
         return (
+            <React.Fragment>
+     <SafeAreaView style={{ flex: 0, backgroundColor: 'red' }} />
             <View style={styles.mainView}>
-                <Text>Wellcome to UsernameRecover</Text>
+                <Toolbar 
+                onPressLeftIcon={this.props.onbackPress}
+                notificationIcon={""}
+                title={this.props.toolbarTitle}/>
                 <ImageBackground source={Logo} resizeMode="cover" style={styles.backgroundImage}>
                     <View>
                         <Text style={styles.imgtextCenter}>USERNAME RECOVER</Text>
@@ -23,6 +29,8 @@ class UserNameRecovery extends Component {
                 />
                 <Text style={styles.forgotPasswordText}>Forgot your password?</Text>
             </View>
+          
+            </React.Fragment>
 
         )
     }
