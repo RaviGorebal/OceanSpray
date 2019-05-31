@@ -7,7 +7,7 @@ export default class Main extends Component<Props> {
   render() {
     return (
       <View style={styles.appContainer}>
-        <StatusBar backgroundColor="black" barStyle="dark-content" />
+        <StatusBar backgroundColor="#ba102c" barStyle="light-content" />
         <Routes />
       </View>
     );
