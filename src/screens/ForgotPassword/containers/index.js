@@ -76,7 +76,7 @@ renderLoginForm = () => {
     navigateTo("loginContainer")
   }
   onForgotUsername = () =>{
-    navigateTo("loginContainer")
+    navigateTo("forgotUsername")
   }
  
 
