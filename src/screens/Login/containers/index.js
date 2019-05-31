@@ -9,7 +9,7 @@ onForgotPassword = () =>{
     navigateTo("forgotPassword")
 }
 onForgotUserName = () =>{
-    navigateTo("forgotusernamecontainer")
+    navigateTo("forgotUsername")
 }
 
 

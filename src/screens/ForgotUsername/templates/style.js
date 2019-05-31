@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
      flex:1
     },
     backgroundImage: {
-    flex:.6,
+    flex:.8,
     top: 0, 
     left: 0, 
     right: 0, 

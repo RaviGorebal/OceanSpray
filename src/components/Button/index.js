@@ -1,7 +1,16 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Icon } from "react-native-elements";
 import styles from './style';
+
+const propTypes = {
+  title : PropTypes.string,
+  onPress : PropTypes.func,
+  disabled : PropTypes.bool,
+  iconName : PropTypes.string,
+  
+}
 
 const defaultProps = {
     title: "Button",
@@ -36,5 +45,6 @@ class Button extends Component {
 }
 
 Button.defaultProps = defaultProps;
+Button.propTypes = propTypes;
 
 export default Button
