@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import {BackHandler} from "react-native";
 import {Router, Scene} from "react-native-router-flux";
 
+import  MembershipDetails  from "../../screens/MemberShipDetails/MembershipDetails";
 import  LanguageContainer  from "../../screens/Language/containers";
 import LoginContainer from '../../screens/Login/containers';
 import ForgotPasswordContainer from "../../screens/ForgotPassword/containers"
@@ -28,6 +29,7 @@ export default class Routes extends Component {
         return (
             <Router {...this.props}  backAndroidHandler={this.handleBackButton.bind(this)}>
                 <Scene hideNavBar={true} initial={true}>
+                    <Scene key="membershipDetails" component={MembershipDetails} title="MembershipDetails" />
                     <Scene key="languageContainer" component={LanguageContainer} title="LanguageContainer" />
                     <Scene key="loginContainer" component={LoginContainer} title="Login" />
                     <Scene key="forgotUsername" component={ForgotUserNameContainer} title="Forgot Username" />
