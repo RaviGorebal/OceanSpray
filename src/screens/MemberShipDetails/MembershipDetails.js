@@ -1,14 +1,14 @@
 
 import {connect} from "react-redux";
 import React, {Component} from "react";
-import {StyleSheet,Text,Platform,Dimensions, View,ScrollView,Image,TouchableOpacity,UIManager,LayoutAnimation, FlatList} from 'react-native';
+import {SafeAreaView,Text,Platform,Dimensions, View,ScrollView,Image,TouchableOpacity,UIManager,LayoutAnimation, FlatList} from 'react-native';
 import Icon from "react-native-vector-icons/EvilIcons";
 
 import memberloyaltyStyles from "../MemberShipDetails/memberloyaltyStyles"
 
+// const SFProTextMedium = "SFProText-Medium";
 
-const SFProTextMedium = "SFProText-Medium";
-const SFProTextRegular = "SFProText-Regular";
+// const SFProTextRegular = "SFProText-Regular";
 const SFProTextSemibold = "SFProText-Semibold";
 const RobotoMedium = "Roboto-Medium";
 const RobotoRegular = "Roboto-Regular";
@@ -78,8 +78,10 @@ export class MembershipDetails extends Component {
     render() {
         // const {isLoggedin}=this.props;
         return (
+            <React.Fragment>
+            {/* <SafeAreaView style={{ flex: 0, backgroundColor: '#ba102c' }} > */}
             <ScrollView style={memberloyaltyStyles.mainView}>
-                <View style={{ paddingBottom:60}}>
+                <View style={{ paddingBottom:20}}>
                     <View style={memberloyaltyStyles.mainViewForList}>
                         <TouchableOpacity 
                             value={this.state.expanded1}
@@ -92,7 +94,7 @@ export class MembershipDetails extends Component {
                                     <Text style={memberloyaltyStyles.loyaltyMemberGroup}>Total Assessment: $914.54</Text>
                                 </View>
                                 <View style={memberloyaltyStyles.expandIconView}>
-                                    <Icon name= { this.state.expanded1 ? "chevron-up" : "chevron-down"} size={35} color='rgb(128, 128, 128)' style={memberloyaltyStyles.expandIcon} />
+                                    <Icon name= { this.state.expanded1 ? "chevron-up" : "chevron-down"} size={35} color='black' style={memberloyaltyStyles.expandIcon} />
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -129,6 +131,8 @@ export class MembershipDetails extends Component {
                 </View>
             </View>
         </ScrollView>
+        {/* </SafeAreaView> */}
+        </React.Fragment>
         );
     }
 }

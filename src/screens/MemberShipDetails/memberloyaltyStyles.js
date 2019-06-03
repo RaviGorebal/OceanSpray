@@ -4,8 +4,8 @@ const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
 
 //Fonts fot both Android & ios
-const SFProTextMedium = "SFProText-Medium";
-const SFProTextRegular = "SFProText-Regular";
+// const SFProTextMedium = "SFProText-Medium";
+// const SFProTextRegular = "SFProText-Regular";
 const SFProTextSemibold = "SFProText-Semibold";
 const RobotoMedium = "Roboto-Medium";
 const RobotoRegular = "Roboto-Regular";
@@ -16,7 +16,7 @@ const memberloyaltyStyles = StyleSheet.create({
       flex:1,
         backgroundColor:"#FFFFFF",
         // paddingTop: ((Platform.OS === 'ios' && deviceHeight === 896 && deviceWidth === 414) || (Platform.OS === 'ios' && deviceHeight === 812 && deviceWidth === 375) ? 30 : 0),
-        paddingTop: ((Platform.OS === 'ios' && deviceHeight === 667 && deviceWidth === 375) || (Platform.OS === 'ios' && deviceHeight === 736 && deviceWidth === 414)? 20 : 0)
+        paddingTop: ((Platform.OS === 'ios' && deviceHeight === 667 && deviceWidth === 375) || (Platform.OS === 'ios' && deviceHeight === 736 && deviceWidth === 414)? 20 : 20)
       },
      closeButtonView: { flex: 1,
         flexDirection: "column",
@@ -80,14 +80,14 @@ const memberloyaltyStyles = StyleSheet.create({
       titleViewMainText:{ 
         fontSize: 22,
         color: "#000",
-        fontFamily: Platform.OS === "ios" ? SFProTextMedium : RobotoMedium,
+        // fontFamily: Platform.OS === "ios" ? SFProTextMedium : RobotoMedium,
         paddingBottom:Platform.OS === "ios" ? 5 : 4,
       },
         titleViewSubText:{ 
           fontSize:14,
           paddingBottom:10,
           color:"#000",
-          fontFamily: Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
+          // fontFamily: Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
         },
         joinNowView:{ 
           marginTop:10,     
@@ -100,7 +100,7 @@ const memberloyaltyStyles = StyleSheet.create({
           paddingVertical:2,
           textAlign:"center",
           fontSize:12,
-          fontFamily : Platform.OS === "ios" ? SFProTextMedium : RobotoMedium,
+          // fontFamily : Platform.OS === "ios" ? SFProTextMedium : RobotoMedium,
         },
       contentView:{
         paddingTop:16,
@@ -112,14 +112,14 @@ const memberloyaltyStyles = StyleSheet.create({
       firstContent:{
         fontSize:16,
         paddingHorizontal:7,
-        fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
+        // fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
         color:"rgb(132,132,132)"}
         ,
       secondContent:{
         paddingTop:Platform.OS === "ios" ? 15 : 13,
         paddingHorizontal:7,
         fontSize:16,
-        fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
+        // fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
         color:"rgb(132,132,132)"
       },
       loyaltyHeading:{
@@ -127,7 +127,7 @@ const memberloyaltyStyles = StyleSheet.create({
         paddingLeft:6,
         color:'#000',
         fontSize:16,
-        fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
+        // fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
       },
       subListSeperator:{
         marginLeft: 0,
@@ -159,7 +159,7 @@ const memberloyaltyStyles = StyleSheet.create({
     loyaltyMemberGroup:{ 
       fontSize: 20,
       marginTop:-1, 
-      fontFamily : Platform.OS === "ios" ? SFProTextMedium : RobotoMedium,
+      // fontFamily : Platform.OS === "ios" ? SFProTextMedium : RobotoMedium,
       fontWeight: "bold",
       color: "#000",
       
@@ -173,7 +173,7 @@ const memberloyaltyStyles = StyleSheet.create({
     loyaltyPoints:{
       fontSize: 14,
       paddingTop:5, 
-      fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
+      // fontFamily : Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
     },
     expandIconView:{
       flex:0.1, 
@@ -217,7 +217,7 @@ const memberloyaltyStyles = StyleSheet.create({
     subTextContent:{ 
     color:"#848484",
     fontSize:14,
-    fontFamily: Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
+    // fontFamily: Platform.OS === "ios" ? SFProTextRegular : RobotoRegular,
     paddingRight:15,
     paddingTop:1}
   });
