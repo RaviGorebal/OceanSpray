@@ -27,10 +27,29 @@ class MyHarvestSortAndFilterTemplate extends Component {
             <React.Fragment>
                 <SafeAreaView style={{ flex: 0, backgroundColor: '#ba102c' }} />
                 <SafeAreaView style={styles.appContainer}>
-                   
+                   <View style={styles.actionContainer}>
+                        <TouchableOpacity style={styles.resetView}>
+                                <Text style={styles.resetText}>Reset</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.applyView}>
+                                <Text style={styles.applyText}>Apply</Text>
+                        </TouchableOpacity>
+                   </View>
                     <View style={styles.subContainer}>
-                    <ToggleButton/>
-
+                       <View style={styles.sortTextView}>
+                            <Text style={styles.sortTextStyle}>Sort</Text>
+                       </View>
+                        <ToggleButton
+                        firstButtonName="Date"
+                        secondButtonName="Status"
+                        onPressFirstButtonView={this.props.onPressFirstButtonView}
+                        onPressSecondButtonView={this.props.onPressSecondButtonView}
+                        firstViewContainer={styles.firstViewContainer}
+                        toggleButtonContainer={styles.toggleButtonContainer}
+                        />
+                        <View style={styles.sortTextView}>
+                            <Text style={styles.sortTextStyle}>Filter</Text>
+                        </View>
                     </View>
                 </SafeAreaView>
             </React.Fragment>

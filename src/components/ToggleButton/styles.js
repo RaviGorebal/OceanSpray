@@ -5,11 +5,9 @@ const styles = StyleSheet.create({
 
     toggleButtonContainer: {
             height: 40,
-            marginTop:20,
             borderRadius:8,
             borderWidth: 2,
             borderColor: 'rgb(210, 215, 217)',
-            width: "100%",
             alignItems:'center',
             flexDirection: "row",
             justifyContent: "space-between",

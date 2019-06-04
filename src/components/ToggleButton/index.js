@@ -18,8 +18,8 @@ const defaultProps = {
     onPressSecondButtonView: ()=>{},
     toolbarContainer:{},
     toggleButtonContainer:{},
-    firstButtonName:"Date",
-    secondButtonName:"Status"
+    firstButtonName:"Button 1",
+    secondButtonName:"Button 2"
 
 }
 
