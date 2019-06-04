@@ -8,6 +8,8 @@ import  LanguageContainer  from "../../screens/Language/containers";
 import LoginContainer from '../../screens/Login/containers';
 import ForgotPasswordContainer from "../../screens/ForgotPassword/containers"
 import ForgotUserNameContainer from '../../screens/ForgotUsername/containers';
+import MyHarvestSortAndFilterContainer from "../../screens/MyHarvestSortAndFilter/containers";
+
 
 const propTypes = {
     isLoggedin: PropTypes.bool
@@ -29,7 +31,8 @@ export default class Routes extends Component {
         return (
             <Router {...this.props}  backAndroidHandler={this.handleBackButton.bind(this)}>
                 <Scene hideNavBar={true} initial={true}>
-                    <Scene key="membershipDetails" component={MembershipDetails} title="MembershipDetails" />
+                <Scene key="myHarvestFilterContainer" component={MyHarvestSortAndFilterContainer} title="MyHarvest filter"/>    
+                <Scene key="membershipDetails" component={MembershipDetails} title="MembershipDetails" />
                     <Scene key="languageContainer" component={LanguageContainer} title="LanguageContainer" />
                     <Scene key="loginContainer" component={LoginContainer} title="Login" />
                     <Scene key="forgotUsername" component={ForgotUserNameContainer} title="Forgot Username" />
