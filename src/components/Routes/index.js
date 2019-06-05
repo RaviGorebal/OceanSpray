@@ -72,7 +72,7 @@ export default class Routes extends Component {
                                  <Scene key="My Harvest"  hideNavBar={true}  icon={this.renderMyHarvestIcon} component={MembershipDetails}  />
                                  <Scene key="My Farm" hideNavBar={true}  icon={this.renderMyFarmIcon} component={LoginContainer}  />
                                  <Scene key="Community" hideNavBar={true}  icon={this.renderCommunityIcon} component={ForgotUserNameContainer}  />
-                                 <Scene key="More" hideNavBar={true}  icon={this.rendermoreIcon} component={ForgotPasswordContainer} />
+                                 <Scene key="More" hideNavBar={true}  icon={this.rendermoreIcon} component={MyHarvestSortAndFilterContainer} />
                             </Scene>
                 <Scene key="myHarvestFilterContainer" hideNavBar={true} component={MyHarvestSortAndFilterContainer} title="MyHarvest filter"/>    
                 <Scene key="membershipDetails" hideNavBar={true} component={MembershipDetails} title="MembershipDetails" />

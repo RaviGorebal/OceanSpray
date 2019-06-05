@@ -4,57 +4,39 @@ import {View, Text,Image,Alert,TouchableOpacity} from "react-native";
 import styles from "./styles";
 
 const propTypes = {
-    onPressFirstButtonView:PropTypes.func,
-    onPressSecondButtonView:PropTypes.func,
+    onPressFirstButton:PropTypes.func,
+    onPressSecondButton:PropTypes.func,
     toolbarContainer: PropTypes.object,
     toggleButtonContainer:PropTypes.object,
     firstButtonName:PropTypes.string,
-    secondButtonName:PropTypes.string
-
+    secondButtonName:PropTypes.string,
+    handleButtonClick:PropTypes.func
 };
 
 const defaultProps = {
-    onPressFirstButtonView: ()=>{},
-    onPressSecondButtonView: ()=>{},
+    onPressFirstButton: ()=>{},
+    onPressSecondButton: ()=>{},
+    handleButtonClick:()=>{},
     toolbarContainer:{},
     toggleButtonContainer:{},
-    firstButtonName:"Date",
-    secondButtonName:"Status"
+    firstButtonName:"Button 1",
+    secondButtonName:"Button 2"
 
 }
 
 class ToggleButton extends Component{
 
-    constructor(props){
-        super(props);
-        this.state={
-            buttonId: 1,
-        }
-        this.handleViewContainerClick = this.handleViewContainerClick.bind(this);
-    }
-
-    handleViewContainerClick(id){
-        this.setState({
-            buttonId:id
-        });
-      if(this.state.buttonId == 1){
-         this.props.onPressFirstButtonView();
-      }else{
-          this.props.onPressSecondButtonView();
-      }
-      }
     render(){
-        console.log(this.props.notifications);
         return(
                 <View style={[styles.toggleButtonContainer, this.props.toggleButtonContainer]}>
-                    <TouchableOpacity onPress={()=>this.handleViewContainerClick(1)} style={this.state.buttonId === 1 ? [styles.fistViewContainer,this.props.firstViewContainer]: [styles.secondViewcontainer,this.props.secondViewContainer]}>
+                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(1) ; this.props.onPressFirstButton()}} style={this.props.buttonId === 1 ? [styles.fistViewContainer,this.props.firstViewContainer]: [styles.secondViewcontainer,this.props.secondViewContainer]}>
                         <View >
-                            <Text style={this.state.buttonId === 1 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.firstButtonName}</Text>
+                            <Text style={this.props.buttonId === 1 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.firstButtonName}</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>this.handleViewContainerClick(2)} style={this.state.buttonId === 2 ? [styles.fistViewContainer,this.props.firstViewContainer,styles.secondButtonView]: [styles.secondViewcontainer,this.props.secondViewContainer]} >
+                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(2); this.props.onPressSecondButton()}} style={this.props.buttonId === 2 ? [styles.fistViewContainer,this.props.firstViewContainer,styles.secondButtonView]: [styles.secondViewcontainer,this.props.secondViewContainer]} >
                         <View >
-                            <Text style={this.state.buttonId === 1 ? [styles.secondButtonTextStyles,this.props.secondButtonTextStyles]:[styles.textStyles,this.props.textStyles]}>{this.props.secondButtonName}</Text>
+                            <Text style={this.props.buttonId === 2 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.secondButtonName}</Text>
                         </View>
                     </TouchableOpacity>
                 </View>

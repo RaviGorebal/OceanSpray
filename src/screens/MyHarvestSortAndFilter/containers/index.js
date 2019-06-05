@@ -25,13 +25,28 @@ class MyHarvestSortAndFilterContainer extends Component {
   onPressNavigateBack = () =>{
     navigateTo("loginContainer")
   }
- 
+  onPressFirstButton=()=>{
+    console.log("first button")
+  }
+  onPressSecondButton=()=>{
+    console.log("second button")
+  }
+
+  onPressResetButton=()=>{
+    console.log("reset Buttton");
+  }
+  onPressApplyButton=()=>{
+    console.log("apply")
+  }
 
   render() {
     const {handleSubmit} = this.props;
     return (
     <MyHarvestSortAndFilterTemplate 
-      
+    onPressFirstButton={this.onPressFirstButton}
+    onPressSecondButton={this.onPressSecondButton}
+    onPressResetButton={this.onPressResetButton}
+    onPressApplyButton={this.onPressApplyButton}
       />
     );
   }
