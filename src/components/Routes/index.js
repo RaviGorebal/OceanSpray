@@ -9,7 +9,7 @@ import LoginContainer from '../../screens/Login/containers';
 import ForgotPasswordContainer from "../../screens/ForgotPassword/containers"
 import ForgotUserNameContainer from '../../screens/ForgotUsername/containers';
 import MyHarvestSortAndFilterContainer from "../../screens/MyHarvestSortAndFilter/containers";
-
+import FlowchartTemplate from "../../screens/Flowchart/Templates"
 
 const propTypes = {
     isLoggedin: PropTypes.bool
@@ -71,7 +71,7 @@ export default class Routes extends Component {
                                  <Scene key="Home" hideNavBar={true}  icon={this.renderHomeIcon} component={LanguageContainer} />
                                  <Scene key="My Harvest"  hideNavBar={true}  icon={this.renderMyHarvestIcon} component={MembershipDetails}  />
                                  <Scene key="My Farm" hideNavBar={true}  icon={this.renderMyFarmIcon} component={LoginContainer}  />
-                                 <Scene key="Community" hideNavBar={true}  icon={this.renderCommunityIcon} component={ForgotUserNameContainer}  />
+                                 <Scene key="Community" hideNavBar={true}  icon={this.renderCommunityIcon} component={FlowchartTemplate}  />
                                  <Scene key="More" hideNavBar={true}  icon={this.rendermoreIcon} component={MyHarvestSortAndFilterContainer} />
                             </Scene>
                 <Scene key="myHarvestFilterContainer" hideNavBar={true} component={MyHarvestSortAndFilterContainer} title="MyHarvest filter"/>    

@@ -11,13 +11,20 @@ class FlowchartTemplate extends Component<Props> {
         super(props);
         this.state={
             buttonId: 1,
+            buttonId2: 1,
         }
         this.handleButtonClick = this.handleButtonClick.bind(this);
+        this.handleButtonClick2 = this.handleButtonClick2.bind(this);
     }
 
     handleButtonClick(id){
         this.setState({
             buttonId:id
+        });
+      }
+      handleButtonClick2(id){
+        this.setState({
+            buttonId2:id
         });
       }
 
@@ -39,10 +46,10 @@ class FlowchartTemplate extends Component<Props> {
                         firstButtonName="Regional"
                         secondButtonName="My Farm"
                         firstViewContainer={styles.firstViewContainer}
-                        buttonId={this.state.buttonId}
+                        buttonId={this.state.buttonId2}
                         toggleButtonContainer={styles.toggleButtonContainer}
                         textStyles={styles.textStyles}
-                        handleButtonClick={this.handleButtonClick}
+                        handleButtonClick={this.handleButtonClick2}
                         onPressFirstButton={this.props.onPressFirstButton}
                         onPressSecondButton={this.props.onPressSecondButton}
                         secondButtonTextStyles={styles.secondButtonTextStyles}

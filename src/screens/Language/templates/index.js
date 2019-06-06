@@ -1,55 +1,67 @@
+/**
+* @author Sravya <yerrusravya@photoninfotech.net>
+* @version 
+* @summary Language Screen for the application.
+* @description The user will ask for language selection either English or French 
+*/
+
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import View, Text, TouchableOpacity, Image, Alert, ScrollView, Platform, 
+*/
+
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
-import { StyleSheet, Text, View,Image,TouchableOpacity} from 'react-native';
+import {Text, View,Image,TouchableOpacity,ImageBackground} from 'react-native';
 import {navigateTo} from "../../../utils/utility";
-
+import Button from './../../../components/Button';
+import Logo from '../../../assets/first.png';
+import styles from "./style";
 
 const propTypes = {
     onbackPress: PropTypes.func,
-    onForgotPassword:PropTypes.func
+    onEnglishPressed:PropTypes.func,
+    onFrenchPressed:PropTypes.func
 };
 
 const defaultProps = {
     onbackPress: () => {},
-    onForgotPassword: () =>{}
+    onEnglishPressed: () =>{},
+    onFrenchPressed: () =>{}
 };
 
 
-onForgotPassword = () =>{
+onEnglishPressed = () =>{
     navigateTo("loginContainer")
+},
+onFrenchPressed = () =>{
+  navigateTo("loginContainer")
 }
-class LanguageTemplate extends Component<Props> {
+class LanguageTemplate extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{flex:0.5,justifyContent: 'center',alignItems: 'center',}}>
-          <TouchableOpacity>
-            <View>
-              <Image source={require("../../../assets/OceanSprayLogo.png")}/>
-            </View>
-          </TouchableOpacity>
-          <View>
-            <Text style={styles.text}>GROW ON</Text>
-          </View>
-        </View>
-        <View style={{flex:0.5}}>
-          <View>
+        <ImageBackground source={Logo} style={{width: '100%', height: '100%'}}>
+          <View style={{top:400}}>
             <Text style={styles.language}>Select a language:</Text>
-            {/* <TouchableOpacity style={styles.button}>
-              <Text style = {styles.buttonText}>
-                English
-              </Text>
-            </TouchableOpacity> */}
-                    <TouchableOpacity onPress={this.props.onForgotPassword} style={styles.button}>
-                         <Text style={styles.buttonText}>English</Text>
-                    </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Text style = {styles.buttonText}>
-                French
-              </Text>
-            </TouchableOpacity>
+                <Button
+                  title="English"
+                  style={styles.buttonStyle}
+                  textStyle={styles.buttonTextStyle}
+                  onPress={this.props.onEnglishPressed}
+                />
+                <Button
+                  title="French"
+                  style={styles.buttonStyle}
+                  textStyle={styles.buttonTextStyle}
+                  onPress={this.props.onFrenchPressed}
+                />
+            
           </View>
-        </View>
+                    </ImageBackground>
+        
+        
       </View>
     );
   }
@@ -60,44 +72,3 @@ LanguageTemplate.defaultProps = defaultProps;
 LanguageTemplate.propTypes = propTypes;
 
 export default LanguageTemplate;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ba102c',
-  },
-  text: {
-    margin:10,
-    fontSize: 50,
-    color: '#FFFFFF',
-    textAlign: 'center',
-    fontWeight:'bold',
-  },
-  language:{
-    margin:10,
-    fontSize: 30,
-    color: '#FFFFFF',
-    textAlign: 'center',
-  },
-  buttonText: {
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight:'bold',
-    color: '#00267F',
-    paddingTop:10,
-    paddingBottom:10,
-  },
-  button: {
-    width: 400, 
-    height: 60,
-    margin:10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:'#FFFFFF',
-    borderRadius:10,
-    borderWidth: 1,
-    borderColor: '#fff'
-  },
-});
