@@ -29,12 +29,12 @@ class ToggleButton extends Component{
     render(){
         return(
                 <View style={[styles.toggleButtonContainer, this.props.toggleButtonContainer]}>
-                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(1) ; this.props.onPressFirstButton()}} style={this.props.buttonId === 1 ? [styles.fistViewContainer,this.props.firstViewContainer]: [styles.secondViewcontainer,this.props.secondViewContainer]}>
+                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(1) ; this.props.onPressFirstButton();this.props.onPressFirstButtonView()}} style={this.props.buttonId === 1 ? [styles.fistViewContainer,this.props.firstViewContainer]: [styles.secondViewcontainer,this.props.secondViewContainer]}>
                         <View >
                             <Text style={this.props.buttonId === 1 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.firstButtonName}</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(2); this.props.onPressSecondButton()}} style={this.props.buttonId === 2 ? [styles.fistViewContainer,this.props.firstViewContainer,styles.secondButtonView]: [styles.secondViewcontainer,this.props.secondViewContainer]} >
+                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(2); this.props.onPressSecondButton();this.props.onPressFirstButtonView()}} style={this.props.buttonId === 2 ? [styles.fistViewContainer,this.props.firstViewContainer,styles.secondButtonView]: [styles.secondViewcontainer,this.props.secondViewContainer]} >
                         <View >
                             <Text style={this.props.buttonId === 2 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.secondButtonName}</Text>
                         </View>
