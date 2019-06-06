@@ -6,6 +6,8 @@ import styles from "./styles";
 const propTypes = {
     onPressFirstButton:PropTypes.func,
     onPressSecondButton:PropTypes.func,
+    onPressFirstButtonView:PropTypes.func,
+    onPressSecondButtonView:PropTypes.func,
     toolbarContainer: PropTypes.object,
     toggleButtonContainer:PropTypes.object,
     firstButtonName:PropTypes.string,
@@ -16,6 +18,8 @@ const propTypes = {
 const defaultProps = {
     onPressFirstButton: ()=>{},
     onPressSecondButton: ()=>{},
+    onPressFirstButtonView:()=>{},
+    onPressSecondButtonView:()=>{},
     handleButtonClick:()=>{},
     toolbarContainer:{},
     toggleButtonContainer:{},
@@ -34,7 +38,7 @@ class ToggleButton extends Component{
                             <Text style={this.props.buttonId === 1 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.firstButtonName}</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(2); this.props.onPressSecondButton();this.props.onPressFirstButtonView()}} style={this.props.buttonId === 2 ? [styles.fistViewContainer,this.props.firstViewContainer,styles.secondButtonView]: [styles.secondViewcontainer,this.props.secondViewContainer]} >
+                    <TouchableOpacity onPress={()=>{this.props.handleButtonClick(2); this.props.onPressSecondButton();this.props.onPressSecondButtonView()}} style={this.props.buttonId === 2 ? [styles.fistViewContainer,this.props.firstViewContainer,styles.secondButtonView]: [styles.secondViewcontainer,this.props.secondViewContainer]} >
                         <View >
                             <Text style={this.props.buttonId === 2 ? [styles.textStyles,this.props.textStyles]:[styles.secondButtonTextStyles,this.props.secondButtonTextStyles]}>{this.props.secondButtonName}</Text>
                         </View>

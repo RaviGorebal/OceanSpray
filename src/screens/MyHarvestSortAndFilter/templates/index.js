@@ -6,6 +6,8 @@ import ToggleButton from "../../../components/ToggleButton";
 import OceanSprayImages from "../../../constants/imageSource";
 
 const propTypes = {
+    onPressFirstButton:PropTypes.func,
+    onPressSecondButton:PropTypes.func,
     onPressFirstButtonView:PropTypes.func,
     onPressSecondButtonView:PropTypes.func,
     handleButtonClick:PropTypes.func,
@@ -19,6 +21,8 @@ const propTypes = {
 }
 
 const defaultProps = {
+    onPressFirstButton:()=>{},
+    onPressSecondButton:()=>{},
     onPressFirstButtonView: ()=>{},
     onPressSecondButtonView: ()=>{},
     handleButtonClick:()=>{},
