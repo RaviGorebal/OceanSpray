@@ -1,6 +1,23 @@
+/**
+ * @author Sharanagouda <Sharanagouda.k@photoninfotech.net>
+ * @version 
+ * @summary Custom Toolbar component.
+ * @description A custom Toolbar component is being made so that it can be used everywhere..
+ */
+
+
+/**
+ * @import React component from "react" for creating custom react component and to use life cycle
+ * hooks come along with react.
+ * @import View,Text,TouchaleOpacity, Image for creating our view.
+ * @import PropType for using props.
+ */
 import PropTypes from "prop-types";
 import React, {Component} from "react";
 import {View, Text,Image, TouchableOpacity} from "react-native";
+/**
+ * @import styles object.This object have all the styles written for this particular screen.
+ */
 import styles from "./styles";
 import OceanSprayImages from "../../constants/imageSource";
 
@@ -23,9 +40,17 @@ const defaultProps = {
     oceanLogoImage:{},
     notifications:0
 }
-
+/**
+ * Represents Toolbar
+ * @class Toolbar
+ * @extends Component
+ */
 class Toolbar extends Component{
-    
+
+    /**
+    * @function render
+    * React render method for rendering the native elements
+    */
     render(){
         console.log(this.props.notifications);
         return(

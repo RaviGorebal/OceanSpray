@@ -1,6 +1,23 @@
+/**
+ * @author Sharanagouda <Sharanagouda.k@photoninfotech.net>
+ * @version 
+ * @summary Custom ToggleButton component.
+ * @description A custom ToggleButton component is being made so that it can be used everywhere..
+ */
+
+
+/**
+ * @import React component from "react" for creating custom react component and to use life cycle
+ * hooks come along with react.
+ * @import View,Text,TouchaleOpacity, Image for creating our view.
+ * @import PropType for using props.
+ */
 import PropTypes from "prop-types";
 import React, {Component} from "react";
 import {View, Text,Image,Alert,TouchableOpacity} from "react-native";
+/**
+ * @import styles object.This object have all the styles written for this particular screen.
+ */
 import styles from "./styles";
 
 const propTypes = {
@@ -28,8 +45,16 @@ const defaultProps = {
 
 }
 
+/**
+ * Represents ToggleButton
+ * @class ToggleButton
+ * @extends Component
+ */
 class ToggleButton extends Component{
-
+   /**
+    * @function render
+    * React render method for rendering the native elements
+    */
     render(){
         return(
                 <View style={[styles.toggleButtonContainer, this.props.toggleButtonContainer]}>

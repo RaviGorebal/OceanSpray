@@ -1,3 +1,25 @@
+/**
+ * @author Sharanagouda <Sharanagouda.k@photoninfotech.net>
+* @version 
+* @summary ForgotPasswordContainer Screen for the application.
+* @description The screen asks user to enter their email 
+* to login in the application. Their is a link for "forgot passord? ",
+* user can click on this link and user will get email with for resetting the password. The screen throws an alert when entered
+* wrong credentials. The screen uses react and third party npm modules and also few custom components.
+*/
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import View, Text, TouchableOpacity, Image, Alert, ScrollView, Platform, 
+* @import connect from "react-redux" for connecting react compoenent with redux which will convert
+* our component as container component.
+* @import compose from "redux" for removing the complexicity of higher order components used in the screen.
+* @import Field, reduxForm from "redux-form" for composing the form and for getting the form value in
+* and object. also it simplifies form validation.
+* @import validator from "validator" for validating the form fields which requires complex regex
+* i.e., emailid, dateformat etc.
+* for implemnting login with facebook.
+*/
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import { connect } from "react-redux";
@@ -92,6 +114,7 @@ renderLoginForm = () => {
     );
   }
 }
+
 /**
 * @function validate: Its called before form submit. Its validates the form value and returns an error object.
 * if it finds any error, it stops the form submission and throws it.
@@ -109,12 +132,34 @@ const validate = (values) => {
   return errors;
 };
 
+/**
+* Converting redux state to props for the Login component
+* @function mapStateToProps: It takes redux state as params and converts it as props for the above component.
+* @params {object} state: redux state fetched from store
+* @returns {object} props: converted props which can be used in the above component.
+*/
 const mapStateToProps = state =>({
 
 })
-
+/**
+* Converting functions to props for the Login component
+* @function mapDispatchToProps: It takes dispatch as params and further pass it to the methods
+* with given payloads.
+* The methods are converted into props and passed to the Login Component for use
+* @params {function} dispatch: It dispatches action to the reducer
+* @returns {object} props: Its converted props and have methods.
+*/
 const mapDispatchToProps = dispatch =>({
 
 })
+/**
+* @function compose: It takes higher order function as params in order and returns one HOC which again takes
+* component and as param and returns an updated component.
+* @params {function} connect, reduxForm
+* @function connect: It takes "mapStateToProps" and "mapDispatchToProps" which converts state and methods
+* as props for the component.
+* @function reduxForm: It takes an object as params which has the form name and "validate" function as
+* properties. It internally creates a reducer and validates the form.
+*/
 
 export default compose(connect(mapStateToProps,mapDispatchToProps),reduxForm({from:"forgotPassword",validate}))(ForgotPasswordContainer);

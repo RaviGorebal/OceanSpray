@@ -1,9 +1,28 @@
+/**
+ * @author Sharanagouda.k, Kallayya <Sharanagouda.k@photoninfotech.net,Kallayya@photoninfotech.net>
+* @version 
+* @summary MyHarvestSortAndFilterTemplate Screen for the application.
+* @description The screen will display when the user clicks on my harvest after that user has to click on any item form the list 
+then this screen will display next the user can modify the settings and he can save the settings or he can reset the settings
+*As a Farmer, I should be able to view an overlay to sort/filter the delivery lists on the my harvest screen.
+*/
+
+/**
+* @import React compoment from "react" for creating custom react component and to use lifecycle
+* hooks come along with react.
+* @import VView, Text,SafeAreaView,TouchableOpacity,Image,UIManager,LayoutAnimation
+*/
 import PropTypes from "prop-types";
 import React, {Component} from "react";
 import {View, Text,SafeAreaView,TouchableOpacity,Image,UIManager,LayoutAnimation} from "react-native";
-import styles from "./styles";
 import ToggleButton from "../../../components/ToggleButton";
 import OceanSprayImages from "../../../constants/imageSource";
+/**
+* @import styles object. This object have all the styles written for the screens.
+* the styles have been defined in a file named "styles" which is again importing
+* an object from theme file when our theme related styles have been defined.
+*/
+import styles from "./styles";
 
 const propTypes = {
     onPressFirstButton:PropTypes.func,
@@ -32,9 +51,18 @@ const defaultProps = {
     onbackPress: () => {},
 }
 
-
+/**
+* @class MyHarvestSortAndFilterTemplate
+* @extends Component
+* @summary Represents MyHarvestSortAndFilterTemplate class.
+* @description This is a MyHarvestSortAndFilterTemplate class. It extands react Component class for using the functions comes along with it.
+*/
 class MyHarvestSortAndFilterTemplate extends Component {
 
+    /**
+    * @function constructor: Its one of the main functions of react component. It acts as life cycle like componentWillMount for initializing the 
+    * default values
+    */
     constructor(props){
         super(props);
         this.state={
@@ -48,12 +76,19 @@ class MyHarvestSortAndFilterTemplate extends Component {
         }
         this.handleButtonClick = this.handleButtonClick.bind(this);
     }
+        /**
+    * @function _animate:  In _animate() we are using the react-native animation to push the item top and bottom using animation
+    * we have added a toggle button to push the items top and bottom
+    */
     _animate = () => {
         UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         LayoutAnimation.easeInEaseOut();
       
     }
-
+    /**
+    * @function toggle: this toggle is for expanding the listview we use react-native animation 
+    * calling the animate() function
+    */
     toggle=(key)=>{
         if(key==='expanded1'){
        this.setState({
@@ -94,13 +129,24 @@ class MyHarvestSortAndFilterTemplate extends Component {
            }
       }
  
-
+    /**
+    * @function render: Its one of the main functions of react component. It renders the JSX on the screen
+    * In render() we are fetching "handleSubmit" from the props and passing it to "onPress" event of then
+    * submit button. "handleSubmit" submits the form after checking the validation, for apply and reset buttons we use two buttons
+    */
     handleButtonClick(id){
         this.setState({
             buttonId:id
         });
       }
 
+
+
+    /**
+    * @function render: Its one of the main functions of react component. It renders the JSX on the screen
+    * In render() we are fetching "handleSubmit" from the props and passing it to "onPress" event of then
+    * submit button. "handleSubmit" submits the form after checking the validation, for apply and reset buttons we use two buttons
+    */
     render() {
         return (
             <React.Fragment>
