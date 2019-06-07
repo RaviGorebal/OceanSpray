@@ -5,16 +5,29 @@ import FlowchartTemplate from '../Templates';
 
 class FlowchartContainer extends Component {
 
-onForgotPassword = () =>{
-    navigateTo("loginContainer")
-}
+    onPressFirstButton=()=>{
+      alert("first button")
+      }
+      onPressSecondButton=()=>{
+        alert("second button")
+      }
+    
 
 
     render(){
             return(<FlowchartTemplate 
-                onForgotPassword={this.onForgotPassword}/>)
+                onPressFirstButton={this.onPressFirstButton}
+                onPressSecondButton={this.onPressSecondButton}/>)
     }
 }
 
 
-export default FlowchartContainer;
+const mapStateToProps = state =>({
+
+})
+
+const mapDispatchToProps = dispatch =>({
+
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(FlowchartContainer);
