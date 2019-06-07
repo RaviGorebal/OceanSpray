@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import {BackHandler, Image} from "react-native";
 import {Router, Scene} from "react-native-router-flux";
 
-import  MembershipDetails  from "../../screens/MemberShipDetails/MembershipDetails";
+import  MyHarvestDetailsPending  from "../../screens/MyHarvest/templates/MyHarvestPending";
 import  LanguageContainer  from "../../screens/Language/containers";
 import LoginContainer from '../../screens/Login/containers';
 import ForgotPasswordContainer from "../../screens/ForgotPassword/containers"
@@ -69,13 +69,13 @@ export default class Routes extends Component {
                 <Scene initial={true}>
                            <Scene tabs  key="Home"  hideNavBar={true}  tabBarPosition="bottom" swipeEnabled={true} tabBarStyle={{height: 65, backgroundColor:'#ffffff', paddingVertical: 4}}>
                                  <Scene key="Home" hideNavBar={true}  icon={this.renderHomeIcon} component={LanguageContainer} />
-                                 <Scene key="My Harvest"  hideNavBar={true}  icon={this.renderMyHarvestIcon} component={MembershipDetails}  />
+                                 <Scene key="My Harvest"  hideNavBar={true}  icon={this.renderMyHarvestIcon} component={MyHarvestDetailsPending}  />
                                  <Scene key="My Farm" hideNavBar={true}  icon={this.renderMyFarmIcon} component={LoginContainer}  />
                                  <Scene key="Community" hideNavBar={true}  icon={this.renderCommunityIcon} component={FlowchartTemplate}  />
                                  <Scene key="More" hideNavBar={true}  icon={this.rendermoreIcon} component={MyHarvestSortAndFilterContainer} />
                             </Scene>
                 <Scene key="myHarvestFilterContainer" hideNavBar={true} component={MyHarvestSortAndFilterContainer} title="MyHarvest filter"/>    
-                <Scene key="membershipDetails" hideNavBar={true} component={MembershipDetails} title="MembershipDetails" />
+                <Scene key="MyHarvestDetailsPending" hideNavBar={true} component={MyHarvestDetailsPending} title="MyHarvestDetailsPending" />
                     <Scene key="languageContainer" hideNavBar={true} component={LanguageContainer} title="LanguageContainer" />
                     <Scene key="loginContainer" hideNavBar={true} component={LoginContainer} title="Login" />
                     <Scene key="forgotUsername" hideNavBar={true} component={ForgotUserNameContainer} title="Forgot Username" />
