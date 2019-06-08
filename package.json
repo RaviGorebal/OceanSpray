@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "eslint ."
+    "test": "eslint .",
+    "android": "react-native run-android",
+    "build-android": "cd android && ./gradlew clean && ./gradlew assembleRelease",
+    "build-android-windows": "cd android && gradlew clean && gradlew assembleRelease",
+    "android-release": "react-native run-android --variant=release"
   },
   "dependencies": {
     "immutable": "^4.0.0-rc.12",

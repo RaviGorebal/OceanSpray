@@ -15,7 +15,7 @@ import PropTypes from "prop-types";
 import {View,Image,ScrollView,TouchableOpacity,Text,UIManager,LayoutAnimation} from 'react-native';
 import ToggleButton from "../../../components/ToggleButton";
 import Toolbar from '../../../components/Toolbar';
-import styles from "./styles";
+import styles from "./style";
 import OceanSprayImages from "../../../constants/imageSource";
 
 const propTypes = {
@@ -108,13 +108,14 @@ _animate = () => {
                 </View>
               }
           </View>
+          
           <View style={styles.graphView}>
-            <Image style={styles.graph} source={require('../../../assets/graph1.png')}/>
-            <Image style={styles.graph} source={require('../../../assets/graph2.png')}/>
-            <Image style={styles.graph} source={require('../../../assets/graph3.png')}/>
-            <Image style={styles.graph} source={require('../../../assets/graph4.png')}/>
+            <Image style={styles.graph} resizeMode="contain" source={require('../../../assets/graph1.png')}/>
+            <Image style={styles.graph} resizeMode="contain" source={require('../../../assets/graph2.png')}/>
+            <Image style={styles.graph} resizeMode="contain" source={require('../../../assets/graph3.png')}/>
+            <Image style={styles.graph} resizeMode="contain" source={require('../../../assets/graph4.png')}/>
           </View>
-        </View>
+          </View>
       </ScrollView>
     );
   }

@@ -37,15 +37,13 @@ const styles = StyleSheet.create({
     flex:1,
   },
   graph:{
-    // width: Dimensions.get("window").width,
-    // height: Dimensions.get("window").height/4,
-    width:'100%',
-   borderRadius: Platform.OS === "ios" ? 3 : 3,
-   
-  //marginLeft:13,
+    width: Dimensions.get("window").width - 26,
+    height: Dimensions.get("window").height - 480,
+    borderRadius: Platform.OS === "ios" ? 6 : 6,
+    marginLeft:13,
     marginBottom:15,
- // borderWidth: 1,
-  // borderColor: 'rgb(210, 215, 217)',
+    borderWidth: 1,
+    borderColor: 'rgb(210, 215, 217)',
   },
   subViewForMainList:{
     flex:1,
@@ -61,6 +59,7 @@ const styles = StyleSheet.create({
     margin:10,
   },
   loyaltyMemberGroupView:{
+    flex:0.8, 
     justifyContent:"center",
     flexDirection:'column',
   },
@@ -71,7 +70,8 @@ const styles = StyleSheet.create({
     color: "#000",
     marginLeft:10 
   },
-  expandIconView:{ 
+  expandIconView:{
+    flex:0.1, 
     justifyContent:"center",
     paddingRight:Platform.OS === "ios" ? 10 : 5,
   },
