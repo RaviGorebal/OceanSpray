@@ -16,7 +16,7 @@ import PropTypes from "prop-types";
 import {Text, View,Image,TouchableOpacity,ImageBackground} from 'react-native';
 import {navigateTo} from "../../../utils/utility";
 import Button from './../../../components/Button';
-import Logo from '../../../assets/first.png';
+import Logo from '../../../assets/splash_port.png';
 import styles from "./style";
 
 const propTypes = {
