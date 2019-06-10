@@ -40,7 +40,9 @@ const propTypes = {
     loginForm: PropTypes.element,
     onSubmit: PropTypes.func,
     onbackPress: PropTypes.func,
-    onForgotUsername:PropTypes.func
+    onForgotUsername:PropTypes.func,
+    onPressNavigateBack: PropTypes.func,
+    toolbarTitle:PropTypes.func
 }
 
 const defaultProps = {
@@ -48,6 +50,8 @@ const defaultProps = {
     onSubmit: () => {},
     onbackPress: () => {},
     onForgotUsername: () => {},
+    onPressNavigateBack: () => {},
+    toolbarTitle: () =>{}
 }
 
 /**

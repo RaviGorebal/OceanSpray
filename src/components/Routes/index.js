@@ -63,7 +63,7 @@ export default class Routes extends Component {
     }
 
     render() {
-        const {isLoggedin} = this.props;
+        // const {} = this.props;
         return (
             <Router {...this.props}  backAndroidHandler={this.handleBackButton.bind(this)}>
                 <Scene initial={true}>

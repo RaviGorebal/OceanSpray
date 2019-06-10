@@ -48,14 +48,17 @@ const propTypes = {
     loginForm : PropTypes.element,
     onsubmit : PropTypes.func,
     onbackPress: PropTypes.func,
-    onForgotPassword:PropTypes.func
+    onForgotPassword:PropTypes.func,
+    onPressNavigateBack: PropTypes.func,
+    toolbarTitle:PropTypes.func
 };
 
 const defaultProps = {
     loginForm: (<Text>Login form</Text>),
     onbackPress: () => {},
     onForgotPassword: () =>{},
-    onForgotPassword: () => {}
+    onPressNavigateBack: () => {},
+    toolbarTitle: () =>{}
 };
 
 /**
@@ -97,7 +100,7 @@ class UserNameRecovery extends Component {
     * @function onSubmit
     * React onSubmit method will render to login screen and alert will popup
     */
-    onSubmit(values) {
+    onSubmit() {
         alert("success");
     }
 

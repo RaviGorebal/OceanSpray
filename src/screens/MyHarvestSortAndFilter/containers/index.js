@@ -7,17 +7,16 @@ then this screen will display next the user can modify the settings and he can s
 *As a Farmer, I should be able to view an overlay to sort/filter the delivery lists on the my harvest screen.
 */
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+// import {Text, View} from 'react-native';
 import { connect } from "react-redux";
 
 import MyHarvestSortAndFilterTemplate from "../templates";
-import {navigateTo,navigateBack} from "../../../utils/utility";
+import {navigateTo} from "../../../utils/utility";
 /**
 * @import styles object. This object have all the styles written for the screens.
 * the styles have been defined in a file named "styles" which is again importing
 * an object from theme file when our theme related styles have been defined.
 */
-import styles from "./styles";
 
 
 /**
@@ -39,26 +38,26 @@ class MyHarvestSortAndFilterContainer extends Component {
     * @function onPressFirstButton: this function is for testing the button button selection in the toggle button 
     */
   onPressFirstButton=()=>{
-    console.log("first button")
+    // console.log("first button")
   }
       /**
     * @function onPressSecondButton: 
     */
   onPressSecondButton=()=>{
-    console.log("second button")
+    // console.log("second button")
   }
     /**
     * @function onPressResetButton: this funciton is for setting the default setting
     */
   onPressResetButton=()=>{
-    console.log("reset Buttton");
+    // console.log("reset Buttton");
   }
       /**
     * @function onPressApplyButton: this function is for saving the settings 
     * after modifing 
     */
   onPressApplyButton=()=>{
-    console.log("apply")
+    // console.log("apply")
   }
 
     /**
@@ -67,7 +66,7 @@ class MyHarvestSortAndFilterContainer extends Component {
     * submit button. "handleSubmit" submits the form after checking the validation.
     */
   render() {
-    const {handleSubmit} = this.props;
+    // const {handleSubmit} = this.props;
     return (
     <MyHarvestSortAndFilterTemplate 
     onPressFirstButton={this.onPressFirstButton}
@@ -86,7 +85,7 @@ class MyHarvestSortAndFilterContainer extends Component {
 * @returns {object} props: converted props which can be used in the above component.
 */
 const mapStateToProps = state =>({
-
+  state
 })
 
 /**
@@ -98,7 +97,7 @@ const mapStateToProps = state =>({
 * @returns {object} props: Its converted props and have methods.
 */
 const mapDispatchToProps = dispatch =>({
-
+  dispatch
 })
 /**
 * @function connect: It takes "mapStateToProps" and "mapDispatchToProps" which converts state and methods

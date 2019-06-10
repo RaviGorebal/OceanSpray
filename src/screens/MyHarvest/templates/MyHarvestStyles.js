@@ -6,9 +6,9 @@ const deviceHeight = Dimensions.get("window").height;
 //Fonts fot both Android & ios
 // const SFProTextMedium = "SFProText-Medium";
 // const SFProTextRegular = "SFProText-Regular";
-const SFProTextSemibold = "SFProText-Semibold";
-const RobotoMedium = "Roboto-Medium";
-const RobotoRegular = "Roboto-Regular";
+// const SFProTextSemibold = "SFProText-Semibold";
+// const RobotoMedium = "Roboto-Medium";
+// const RobotoRegular = "Roboto-Regular";
 
 
 const HarvestDetailsStyles = StyleSheet.create({

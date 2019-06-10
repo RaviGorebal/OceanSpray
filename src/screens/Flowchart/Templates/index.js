@@ -21,11 +21,15 @@ import OceanSprayImages from "../../../constants/imageSource";
 const propTypes = {
   onPressFirstButton:PropTypes.func,
   onPressSecondButton:PropTypes.func,
+  onbackPress: PropTypes.func,
+  toolbarTitle:PropTypes.func,
   }
 
 const defaultProps = {
   onPressFirstButton:()=>{},
   onPressSecondButton:()=>{},
+  onbackPress:()=>{},
+  toolbarTitle:()=>{}
 }
 
 class FlowchartTemplate extends Component {

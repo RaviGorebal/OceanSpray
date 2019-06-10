@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text,StatusBar, View} from 'react-native';
+import {StatusBar, View} from 'react-native';
 import Routes from "./components/Routes";
 
 type Props = {};

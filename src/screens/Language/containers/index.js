@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native'
+// import { View, Text, ImageBackground } from 'react-native'
 import {navigateTo} from "../../../utils/utility";
 import LanguageTemplate from '../templates';
 

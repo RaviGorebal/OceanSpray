@@ -21,7 +21,7 @@
 * for implemnting login with facebook.
 */
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native'
+import { View, Text } from 'react-native'
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { Field, reduxForm } from "redux-form";
@@ -125,8 +125,10 @@ const validate = (values) => {
 * @params {object} state: redux state fetched from store
 * @returns {object} props: converted props which can be used in the above component.
 */  
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+state
 
+});
 
 /**
 * Converting functions to props for the Login component
@@ -136,8 +138,10 @@ const mapStateToProps = state => ({});
 * @params {function} dispatch: It dispatches action to the reducer
 * @returns {object} props: Its converted props and have methods.
 */
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+dispatch
 
+});
 /**
 * @function compose: It takes higher order function as params in order and returns one HOC which again takes
 * component and as param and returns an updated component.

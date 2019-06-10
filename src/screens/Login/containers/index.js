@@ -16,7 +16,7 @@
 */
 
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native'
+// import { View, Text, ImageBackground } from 'react-native'
 import Login from '../templates';
 import {navigateTo} from "../../../utils/utility";
 

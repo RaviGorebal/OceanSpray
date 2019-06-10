@@ -1,8 +1,7 @@
 import {
     StyleSheet,
     Platform,
-    Dimensions,
-    StatusBar
+    Dimensions
 } from 'react-native';
 
 const styles = StyleSheet.create({

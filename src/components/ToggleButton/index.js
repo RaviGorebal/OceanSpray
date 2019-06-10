@@ -14,7 +14,7 @@
  */
 import PropTypes from "prop-types";
 import React, {Component} from "react";
-import {View, Text,Image,Alert,TouchableOpacity} from "react-native";
+import {View, Text,TouchableOpacity} from "react-native";
 /**
  * @import styles object.This object have all the styles written for this particular screen.
  */
@@ -29,7 +29,15 @@ const propTypes = {
     toggleButtonContainer:PropTypes.object,
     firstButtonName:PropTypes.string,
     secondButtonName:PropTypes.string,
-    handleButtonClick:PropTypes.func
+    handleButtonClick:PropTypes.func,
+    firstViewContainer: PropTypes.func,
+    secondViewContainer: PropTypes.func,
+    
+    secondButtonTextStyles: PropTypes.func,
+    buttonId:PropTypes.func,
+    textStyles:PropTypes.string,
+
+
 };
 
 const defaultProps = {
@@ -41,7 +49,18 @@ const defaultProps = {
     toolbarContainer:{},
     toggleButtonContainer:{},
     firstButtonName:"Button 1",
-    secondButtonName:"Button 2"
+    secondButtonName:"Button 2",
+    firstViewContainer: ()=>{},
+    secondViewContainer: ()=>{},
+    
+    secondButtonTextStyles: ()=>{},
+    buttonId: ()=>{},
+    textStyles: ''
+
+
+
+
+
 
 }
 

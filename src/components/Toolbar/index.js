@@ -29,7 +29,9 @@ const propTypes = {
     toolbarContainer: PropTypes.object,
     oceanLogoContainer:PropTypes.object,
     oceanLogoImage:PropTypes.object,
-    notifications:PropTypes.number
+    notifications:PropTypes.number,
+    leftArrowIcon: PropTypes.any,
+    notificationIcon: PropTypes.any
 };
 
 const defaultProps = {
@@ -38,7 +40,10 @@ const defaultProps = {
     onPressNotificationIcon: ()=>{},
     oceanLogoContainer:{},
     oceanLogoImage:{},
-    notifications:0
+    notifications:0,
+    leftArrowIcon:{},
+    notificationIcon:{}
+
 }
 /**
  * Represents Toolbar
@@ -52,7 +57,7 @@ class Toolbar extends Component{
     * React render method for rendering the native elements
     */
     render(){
-        console.log(this.props.notifications);
+        // console.log(this.props.notifications);
         return(
                 <View style={[styles.toolbarContainer, this.props.toolbarContainer]}>
                     <View style={styles.backArrowContainer}>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform} from 'react-native';
 import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import  SplashScreen from 'react-native-splash-screen';

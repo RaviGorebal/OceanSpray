@@ -13,8 +13,8 @@
 
 import React, {Component} from 'react';
 import PropTypes from "prop-types";
-import {Text, View,Image,TouchableOpacity,ImageBackground} from 'react-native';
-import {navigateTo} from "../../../utils/utility";
+import {Text, View,ImageBackground} from 'react-native';
+// import {navigateTo} from "../../../utils/utility";
 import Button from './../../../components/Button';
 import Logo from '../../../assets/splash_port.png';
 import styles from "./style";
@@ -32,12 +32,12 @@ const defaultProps = {
 };
 
 
-onEnglishPressed = () =>{
-    navigateTo("loginContainer")
-},
-onFrenchPressed = () =>{
-  navigateTo("loginContainer")
-}
+// onEnglishPressed = () =>{
+//     navigateTo("loginContainer")
+// },
+// onFrenchPressed = () =>{
+//   navigateTo("loginContainer")
+// }
 class LanguageTemplate extends Component {
   render() {
     return (

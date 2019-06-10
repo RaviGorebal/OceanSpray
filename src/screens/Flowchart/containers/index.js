@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native'
-import {navigateTo} from "../../../utils/utility";
+// import { View, Text, ImageBackground } from 'react-native'
+// import {navigateTo} from "../../../utils/utility";
 import FlowchartTemplate from '../Templates';
+import { connect } from "react-redux";
+
 
 class FlowchartContainer extends Component {
 
@@ -23,11 +25,11 @@ class FlowchartContainer extends Component {
 
 
 const mapStateToProps = state =>({
-
+  state
 })
 
 const mapDispatchToProps = dispatch =>({
-
+  dispatch
 })
 
 export default connect(mapStateToProps,mapDispatchToProps)(FlowchartContainer);

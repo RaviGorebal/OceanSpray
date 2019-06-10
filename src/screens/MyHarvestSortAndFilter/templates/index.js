@@ -230,7 +230,7 @@ class MyHarvestSortAndFilterTemplate extends Component {
                         onPress={() => this.toggle("expanded3")}>
                         <View style={styles.subViewForMainList}>
                             <View style={styles.imageViewForMainList}>
-                                <Image source={OceanSprayImages.contractNumber} width="100%" height='100%' ></Image>
+                                <Image source={OceanSprayImages.contractNumber} width="100%" height="100%" ></Image>
                             </View>
                             <View style={styles.loyaltyMemberGroupView}>
                                 <Text style={styles.loyaltyMemberGroup} >Contact Number <Text style={styles.textSpan}>(all)</Text></Text>

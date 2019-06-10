@@ -9,7 +9,12 @@ const propTypes = {
   onPress : PropTypes.func,
   disabled : PropTypes.bool,
   iconName : PropTypes.string,
-  
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
+
+  textStyle: PropTypes.string,
+
+  style: PropTypes.any
 }
 
 const defaultProps = {
@@ -19,7 +24,8 @@ const defaultProps = {
     onPress: () => { },
     disabled: false,
     style: {},
-    textColor: "White"
+    textColor: "White",
+    textStyle:''
 }
 
 class Button extends Component {
@@ -27,7 +33,7 @@ class Button extends Component {
         return (
             <View style={styles.mainView}>
                 <TouchableOpacity onPress={this.props.onPress} disabled={this.props.disabled}>
-                    <View style={[styles.buttonStyle, { backgroundColor: this.props.backgroundColor }, { height: this.props.height }, this.props.style]}>
+                    <View style={[styles.buttonStyle, { backgroundColor: this.props.backgroundColor },  this.props.style]}>
                     {this.props.iconName.length > 0 &&
                             <Icon
                                 name={this.props.iconName}

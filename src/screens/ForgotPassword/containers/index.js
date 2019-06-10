@@ -26,10 +26,9 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { Field, reduxForm } from "redux-form";
 import validator from "validator";
-import {Icon} from "react-native-elements";
 
 import ForgotPasswordTemplate from "../templates";
-import {navigateTo,navigateBack} from "../../../utils/utility";
+import {navigateTo} from "../../../utils/utility";
 import InputText from "../../../components/InputText";
 /**
 * @import styles object. This object have all the styles written for the screens.
@@ -47,9 +46,9 @@ import styles from "./styles";
 */
 class ForgotPasswordContainer extends Component {
 
-  onSubmit = (values) => {
+  onSubmit = () => {
 
-    console.log("submit is working");
+    // console.log("submit is working");
     // if (values && values.newPassword) {
     //     const payload = {
     //         key: this.props.otp,
@@ -103,7 +102,7 @@ renderLoginForm = () => {
  
 
   render() {
-    const {handleSubmit} = this.props;
+    // const {} = this.props;
     return (
     <ForgotPasswordTemplate 
       loginForm={this.renderLoginForm()} 
@@ -139,7 +138,7 @@ const validate = (values) => {
 * @returns {object} props: converted props which can be used in the above component.
 */
 const mapStateToProps = state =>({
-
+  state
 })
 /**
 * Converting functions to props for the Login component
@@ -150,7 +149,7 @@ const mapStateToProps = state =>({
 * @returns {object} props: Its converted props and have methods.
 */
 const mapDispatchToProps = dispatch =>({
-
+  dispatch
 })
 /**
 * @function compose: It takes higher order function as params in order and returns one HOC which again takes

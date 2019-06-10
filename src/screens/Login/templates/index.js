@@ -21,7 +21,7 @@
 * i.e., emailid, dateformat etc.
 * for implemnting login with facebook.
 */
-
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, Image, ImageBackground, ScrollView } from "react-native";
 import { connect } from "react-redux";
@@ -36,6 +36,18 @@ import InputText from "./../../../components/InputText";
 * an object from theme file when our theme related styles have been defined.
 */
 import styles from "./styles";
+
+const propTypes = {
+    onForgotUserName: PropTypes.func,
+    onForgotPassword:PropTypes.func,
+    handleSubmit:PropTypes.func
+};
+
+const defaultProps = {
+    onForgotUserName: () => {},
+    onForgotPassword: () =>{},
+    handleSubmit: () =>{}
+};
 
 
 /**
@@ -69,7 +81,7 @@ class Login extends Component {
         )
 
     }
-    onSubmit(values) {
+    onSubmit() {
         alert("success");
     }
 
@@ -134,6 +146,12 @@ class Login extends Component {
         )
     }
 }
+
+Login.defaultProps = defaultProps;
+
+Login.propTypes = propTypes;
+
+
 /**
 * @function validate: Its called before form submit. Its validates the form value and returns an error object.
 * if it finds any error, it stops the form submission and throws it.
@@ -160,7 +178,9 @@ const validate = (values) => {
 * @params {object} state: redux state fetched from store
 * @returns {object} props: converted props which can be used in the above component.
 */
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+    state
+});
 
 /**
 * Converting functions to props for the Login component
@@ -170,7 +190,9 @@ const mapStateToProps = state => ({});
 * @params {function} dispatch: It dispatches action to the reducer
 * @returns {object} props: Its converted props and have methods.
 */
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+    dispatch
+});
 
 /**
 * @function compose: It takes higher order function as params in order and returns one HOC which again takes

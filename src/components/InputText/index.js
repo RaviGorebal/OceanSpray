@@ -15,7 +15,7 @@
 
 import PropTypes from "prop-types";
 import React,{Component} from "react";
-import {TextInput, Text, View, TouchableOpacity,Image} from "react-native";
+import {TextInput, View,Image} from "react-native";
 
 /**
  * @import styles object.This object have all the styles written for this particular screen.

@@ -14,17 +14,27 @@
 * @import Field, reduxForm from "redux-form" for composing the form and for getting the form value in
 * and object. also it simplifies form validation.
 */
-
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import React, { Component } from "react";
-import { Text, Platform, Dimensions, View, ScrollView, Image, TouchableOpacity, UIManager, LayoutAnimation, FlatList } from 'react-native';
+import { Text, Platform, View, ScrollView, Image, TouchableOpacity, UIManager, LayoutAnimation, FlatList,ImageBackground } from 'react-native';
 import Icon from "react-native-vector-icons/EvilIcons";
 import Toolbar from '../../../components/Toolbar';
 
 import HarvestDetailsStyles from "../../MyHarvest/templates/MyHarvestStyles";
 
-const deviceWidth = Dimensions.get("window").width;
-const deviceHeight = Dimensions.get("window").height;
+// const deviceWidth = Dimensions.get("window").width;
+// const deviceHeight = Dimensions.get("window").height;
+
+const propTypes = {
+    onPressNavigateBack: PropTypes.func,
+    toolbarTitle:PropTypes.func
+};
+
+const defaultProps = {
+    onPressNavigateBack: () => {},
+    toolbarTitle: () =>{}
+};
 
 /**
 * @class MyHarvestDetailsWithIncentives
@@ -86,7 +96,7 @@ export class MyHarvestDetailsWithIncentives extends Component {
         * This method calls when user clicks on icon close
         */
     onCloseClick = () => {
-        navigateBack();
+        // navigateBack();
     }
 
     render() {
@@ -134,7 +144,7 @@ export class MyHarvestDetailsWithIncentives extends Component {
                                     this.flatListRef = ref;
                                 }}
                                 ItemSeparatorComponent={() => <View style={HarvestDetailsStyles.subListSeperator} />}
-                                renderItem={({ item, index }) => {
+                                renderItem={({ item }) => {
                                     return (
                                         <View style={HarvestDetailsStyles.mainViewforSubListView}>
                                             <View style={HarvestDetailsStyles.imageforSubContentView}>
@@ -189,7 +199,7 @@ export class MyHarvestDetailsWithIncentives extends Component {
                         <Text style={HarvestDetailsStyles.darkTextStyle}>40</Text>
                     </View>
                     <View style={HarvestDetailsStyles.whiteRowStyles}>
-                        <Text style={HarvestDetailsStyles.textStyle}>% > 1/2: </Text>
+                        <Text style={HarvestDetailsStyles.textStyle}>% &gt 1/2: </Text>
                         <Text style={HarvestDetailsStyles.darkTextStyle}>100</Text>
                     </View>
                     <View style={HarvestDetailsStyles.grayRowStyles}>
@@ -247,7 +257,9 @@ export class MyHarvestDetailsWithIncentives extends Component {
 }
 
 
+MyHarvestDetailsWithIncentives.defaultProps = defaultProps;
 
+MyHarvestDetailsWithIncentives.propTypes = propTypes;
 
 
 /**
@@ -257,6 +269,7 @@ export class MyHarvestDetailsWithIncentives extends Component {
 * @returns {object} props: converted props which can be used in the above component.
 */
 const mapStateToProps = state => ({
+    state
     // isLoggedin: state.auth.isLoggedin,
 });
 
@@ -269,6 +282,7 @@ const mapStateToProps = state => ({
 * @returns {object} props: Its converted props and have methods.
 */
 const mapDispatchToProps = dispatch => ({
+    dispatch
 });
 
 /**

@@ -14,17 +14,26 @@
 * @import Field, reduxForm from "redux-form" for composing the form and for getting the form value in
 * and object. also it simplifies form validation.
 */
-
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import React, { Component } from "react";
-import { Text,Dimensions,View,ScrollView,Image,TouchableOpacity,UIManager,LayoutAnimation,ImageBackground } from 'react-native';
-import Icon from "react-native-vector-icons/EvilIcons";
+import { Text,View,ScrollView,Image,TouchableOpacity,UIManager,LayoutAnimation,ImageBackground } from 'react-native';
 import Toolbar from '../../../components/Toolbar';
 
 import HarvestDetailsStyles from "../../MyHarvest/templates/MyHarvestStyles";
 
-const deviceWidth = Dimensions.get("window").width;
-const deviceHeight = Dimensions.get("window").height;
+// const deviceWidth = Dimensions.get("window").width;
+// const deviceHeight = Dimensions.get("window").height;
+
+const propTypes = {
+    onPressNavigateBack: PropTypes.func,
+    toolbarTitle:PropTypes.func
+};
+
+const defaultProps = {
+    onPressNavigateBack: () => {},
+    toolbarTitle: () =>{}
+};
 
 /**
 * @class MyHarvestDetailsPending
@@ -86,7 +95,7 @@ export class MyHarvestDetailsPending extends Component {
         * This method calls when user clicks on icon close
         */
     onCloseClick = () => {
-        navigateBack();
+        // navigateBack();
     }
 
     render() {
@@ -138,7 +147,7 @@ export class MyHarvestDetailsPending extends Component {
                         <Text style={HarvestDetailsStyles.darkTextStyle}>40</Text>
                     </View>
                     <View style={HarvestDetailsStyles.whiteRowStyles}>
-                        <Text style={HarvestDetailsStyles.textStyle}>% > 1/2: </Text>
+                        <Text style={HarvestDetailsStyles.textStyle}>% &gt 1/2: </Text>
                         <Text style={HarvestDetailsStyles.darkTextStyle}>100</Text>
                     </View>
                     <View style={HarvestDetailsStyles.grayRowStyles}>
@@ -196,6 +205,9 @@ export class MyHarvestDetailsPending extends Component {
     }
 }
 
+MyHarvestDetailsPending.defaultProps = defaultProps;
+
+MyHarvestDetailsPending.propTypes = propTypes;
 
 /**
 * Converting redux state to props for the HarvestDetails component
@@ -204,6 +216,7 @@ export class MyHarvestDetailsPending extends Component {
 * @returns {object} props: converted props which can be used in the above component.
 */
 const mapStateToProps = state => ({
+    state
     // isLoggedin: state.auth.isLoggedin,
 });
 
@@ -216,6 +229,7 @@ const mapStateToProps = state => ({
 * @returns {object} props: Its converted props and have methods.
 */
 const mapDispatchToProps = dispatch => ({
+    dispatch
 });
 
 /**

@@ -5,7 +5,7 @@ export const redirectTo = (scene) => {
     try {
         if (Actions.currentScene) Actions.reset(scene);
     } catch (e) {
-        console.log(e.message);
+        // console.log(e.message);
     }
 };
 
@@ -17,7 +17,7 @@ export const navigateTo = (scene, props = null) => {
             Actions[scene].call();
         }
     } catch (e) {
-        console.log(e.message);
+        // console.log(e.message);
     }
 };
 
@@ -29,7 +29,7 @@ export const navigateBack = (scene = null) => {
             Actions.pop();
         }
     } catch (e) {
-        console.log(e);
+        // console.log(e);
     }
 };
 
@@ -64,22 +64,22 @@ export const heightPercentageToDP = (heightPercent) => {
 export const _fetchCurrentPosition = () => {
     return new Promise((resolve, reject) => {
         try {
-            console.log("here");
+            // console.log("here");
             navigator.geolocation.getCurrentPosition((position) => {
                 if (position && position.coords) {
                     resolve(position);
-                    console.log(position);
+                    // console.log(position);
                 } else {
                     reject("sdfsdf");
                 }
             }, (error) => {
                 reject(error);
-                console.log(error);
+                // console.log(error);
             },
             {enableHighAccuracy: false, timeout: 10000, maximumAge: 1000});
         } catch (e) {
             reject(e);
-            console.log(e);
+            // console.log(e);
         }
     });
 };
@@ -95,7 +95,7 @@ export async function request_location_runtime_permission() {
         }
       )
       if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        console.log("location fetching")
+        // console.log("location fetching")
            let x = await _fetchCurrentPosition();
            return x;
          //  console.log("location",x)
@@ -108,7 +108,7 @@ export async function request_location_runtime_permission() {
             [
               {
                 text: 'Cancel',
-                onPress: () => console.log('Cancel Pressed'),
+                // onPress: () => console.log('Cancel Pressed'),
                 style: 'cancel',
               },
               {text: 'OK', onPress: () => request_location_runtime_permission()},
@@ -117,7 +117,7 @@ export async function request_location_runtime_permission() {
           );
       }
     } catch (err) {
-      console.warn(err)
+    //   console.warn(err)
     }
   }
 
